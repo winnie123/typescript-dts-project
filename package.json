@@ -4,7 +4,10 @@
   "description": "Typescript声明文件项目",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch --config webpack.devConfig.js",
+    "dev": "webpack --env=dev --progress --profile --colors --verbose --config webpack.devConfig.js",
+    "dist": "webpack --env=prod --progress --profile --colors --config webpack.prdConfig.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,18 @@
   "bugs": {
     "url": "https://github.com/winnie123/typescript-dts-project/issues"
   },
-  "homepage": "https://github.com/winnie123/typescript-dts-project#readme"
+  "homepage": "https://github.com/winnie123/typescript-dts-project#readme",
+  "devDependencies": {
+    "@types/node": "^8.0.31",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "jquery": "^3.2.1",
+    "ts-loader": "^2.3.7",
+    "webpack": "^3.6.0",
+    "webpack-merge": "^4.1.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }
